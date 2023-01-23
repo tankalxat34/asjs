@@ -6,7 +6,6 @@ Implementing access to keys by `obj.path.to.your.key` notation as in JavaScript
 ## Installing
 
 ```
-cd your_project
 curl https://github.com/tankalxat34/pyasjs/raw/main/asjs.py -o asjs.py
 ```
 
