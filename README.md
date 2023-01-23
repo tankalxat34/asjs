@@ -1,9 +1,15 @@
-# pyasjs
+# asjs
  Python module for implement object with syntax from JavaScript
 
 Implementing access to keys by `obj.path.to.your.key` notation as in JavaScript
 
 ## Installing
+
+```
+pip install asjs
+```
+
+or like this:
 
 ```
 curl https://github.com/tankalxat34/pyasjs/raw/main/asjs.py -o asjs.py
