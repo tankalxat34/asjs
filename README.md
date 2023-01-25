@@ -1,7 +1,16 @@
 # asjs
- Python module for implement object with syntax from JavaScript
+Python module for implement object with syntax from JavaScript. Implementing access to keys by `obj.path.to.your.key` notation as in JavaScript
 
-Implementing access to keys by `obj.path.to.your.key` notation as in JavaScript
+[![downloads](https://pepy.tech/badge/asjs)](https://pepy.tech/project/asjs)
+[![downloads](https://pepy.tech/badge/asjs/month)](https://pepy.tech/project/asjs)
+[![downloads](https://pepy.tech/badge/asjs/week)](https://pepy.tech/project/asjs)
+[![supported versions](https://img.shields.io/pypi/pyversions/asjs.svg)](https://pypi.org/project/asjs)
+[![pypi](https://img.shields.io/pypi/v/asjs.svg?color=success)](https://pypi.org/project/asjs/)
+[![pypi](https://img.shields.io/pypi/format/asjs)](https://pypi.org/project/asjs/)
+![github top language](https://img.shields.io/github/languages/top/tankalxat34/asjs)
+[![github last commit](https://img.shields.io/github/last-commit/tankalxat34/asjs)](https://github.com/tankalxat34/asjs/commits/main)
+[![github release date](https://img.shields.io/github/release-date/tankalxat34/asjs)](https://github.com/tankalxat34/asjs/releases)
+[![github repo stars](https://img.shields.io/github/stars/tankalxat34/asjs?style=social)](https://github.com/tankalxat34/asjs)
 
 ## Installing
 
