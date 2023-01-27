@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "asjs"
-version = "0.1.1"
+version = "0.1.2"
 description = "Python module for implement object with syntax from JavaScript"
 authors = ["Alexander Podstrechnyy <tankalxat34@gmail.com>"]
 license = "MIT"
