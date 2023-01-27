@@ -93,7 +93,13 @@ class Object:
     
     def __iter__(self):
         return iter(tuple(self.keys()))
-    
+
+    def __setattr__(self, __name, __value):
+        try:
+            self.__dict__[__name] = ObjectNotation(__value)
+        except ValueError:
+            self.__dict__[__name] = __value
+
     def __setitem__(self, key, value):
         setattr(self, str(key), value)
     
@@ -209,15 +215,13 @@ class ObjectNotation(Object):
         """
         Setting new value in object
         """
-        if __value:
-            self.__setattr__(__name, ObjectNotation({__name: __value}).raw(__name))
-        else:
-            self.__setattr__(var2str(__name)[0], ObjectNotation({var2str(__name)[0]: __name}).raw(var2str(__name)[0]))
-    
+        self.__setitem__(__name, __value)
+
     def copy(self):
         """
         Get a new copy of object
         """
         return ObjectNotation(self.__dict__)
+        
 
 
