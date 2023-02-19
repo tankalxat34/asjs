@@ -46,22 +46,18 @@ Using arguments:
 obj = ObjectNotation(key1="value1", key2="value2", key3={"a": "b", "lst": [14, 5, 6, 12]})
 ```
 ### Getting values by keys or indexes
-    >>> obj[0]
-    value1
-    >>> obj.key2
-    value2
-    >>> obj["key3"]
-    [14, 5, 6, 12]
+```py
+>>> obj[0]
+value1
+>>> obj.key2
+value2
+>>> obj["key3"]
+[14, 5, 6, 12]
+```
 
 ### Creating new keys in object
 ```py
 obj.year = 2023
-```
-
-or:
-
-```py
->>> obj.set("year", 2023)
 ```
 
 or:
@@ -76,6 +72,13 @@ or:
 ```py
 >>> obj["year"] = 2023
 ```
+
+or using by unexpected keys-values:
+
+```py
+>>> obj[(3, 2)] = "string_value"
+```
+
 ### Saving functions in object
 ```py
 >>> obj.fibonachi = lambda n: 1 if n <= 2 else obj.fibonachi(n - 1) + obj.fibonachi(n - 2)
@@ -85,23 +88,26 @@ or:
 ```
 
 ### Removing keys by string-names or indexes
-    >>> del obj.year
 
+```py
+>>> del obj.year
+```
 or:
-    
-    >>> del obj[-1]
-
+```py    
+>>> del obj[-1]
+```
 or:
-
-    >>> del obj["year"]
-
+```py
+>>> del obj["year"]
+```
 ### Changing value by key
-    >>> obj.key1 = 123
-
+```py
+>>> obj.key1 = 123
+```
 or:
-
-    >>> obj["key1"] = 123
-
+```py
+>>> obj["key1"] = 123
+```
 ### Cycle `for` by object
 
 Indexes:
@@ -139,4 +145,29 @@ JSObject(a: 'b', lst: JSObject(0: 14, 1: 5, 2: 6, 3: 12))
 True
 >>> "fake_key" in obj
 False
+```
+#### `isArray` function
+```py
+>>> obj.isArray()
+False
+>>> obj.key3.lst.isArray()
+True
+```
+
+#### `toList` function
+```py
+>>> obj.toList()
+Traceback (most recent call last):
+  ...
+TypeError: Object is not be able to convert to list
+>>> obj.key3.lst.toList()
+[14, 5, 6, 12]
+```
+
+#### Slices
+```py
+>>> obj[0:3]
+('value1', 'value2', <asjs.ObjectNotation object at 0x000001D7195A1990>)
+>>> obj.key3.lst[0:3]
+(14, 5, 6)
 ```
