@@ -73,12 +73,6 @@ or:
 >>> obj["year"] = 2023
 ```
 
-or using by unexpected keys-values:
-
-```py
->>> obj[(3, 2)] = "string_value"
-```
-
 ### Saving functions in object
 ```py
 >>> obj.fibonachi = lambda n: 1 if n <= 2 else obj.fibonachi(n - 1) + obj.fibonachi(n - 2)
