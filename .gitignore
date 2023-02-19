@@ -153,3 +153,5 @@ cython_debug/
 
 *.bat
 test.py
+_unittests.py
+test*
